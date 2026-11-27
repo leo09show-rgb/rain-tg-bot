@@ -7,6 +7,7 @@ const {
   RAIN_SECRET,
   SITE_NAME = "Pera",
   SITE_URL = "https://t2m.co/perabet-t",
+  TITLE = "Para Yağmuru!",
   LINK_TEXT = "Pera'da Rain başladı, kaçıran kaybeder!",
   PORT = 10000,
 } = process.env;
@@ -67,7 +68,7 @@ function formatMessage(p) {
   const sender = /^(sistem|system)$/i.test(rawSender) ? "admin" : rawSender;
 
   const lines = [
-    `${E.title} <b>${esc(SITE_NAME)} Rain!</b> ${E.title}`,
+    `${E.title} <b>${esc(TITLE)}</b> ${E.title}`,
     "",
     `${E.sender} <b>Dağıtan:</b> ${esc(sender)}`,
     `${E.total} <b>Toplam:</b> ${num(p.totalAmount)} ${esc(currency)}${approx(p.totalAmount)}`,
